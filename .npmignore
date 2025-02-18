@@ -1,1 +1,10 @@
- 
+.DS_Store
+node_modules
+src
+tests
+examples
+.gitignore
+.npmrc
+tsconfig.json
+vite.config.ts
+*.log 

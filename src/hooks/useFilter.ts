@@ -23,7 +23,7 @@ import type { UseFilterOptions, UseFilterReturn } from '../types';
  * });
  * ```
  */
-export function useFilter({ 
+function useFilter({ 
     initialFilters = {}, 
     onFilterChange,
     defaultExpanded = false,
@@ -76,3 +76,5 @@ export function useFilter({
         toggleExpand,     // 展开/收起切换函数
     };
 }
+
+export { useFilter };
