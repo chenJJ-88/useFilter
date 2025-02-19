@@ -4,7 +4,6 @@ export default defineConfig({
   title: "useFilter",
   description: "一个基于 React 和 Ant Design 的灵活筛选表单 Hook",
   base: '/useFilter/',
-  outDir: '../dist/docs',
   themeConfig: {
     nav: [
       { text: '指南', link: '/guide/' },
