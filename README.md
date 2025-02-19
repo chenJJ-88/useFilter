@@ -30,39 +30,71 @@ yarn add use-antd-filter
 ## 🔨 使用
 
 ```tsx
-import { useFilter } from 'use-antd-filter';
 import { FilterForm } from 'use-antd-filter';
-
-// 使用 Hook
-const YourComponent = () => {
-  const {
-    filters,          // 当前生效的筛选条件
-    tempFilters,      // 临时筛选条件
-    expanded,         // 展开/收起状态
-    visibleItems,     // 可见项目数量
-    handleFilterChange, // 筛选条件改变处理函数
-    handleSearch,     // 查询按钮处理函数
-    resetFilters,     // 重置按钮处理函数
-    toggleExpand,     // 展开/收起切换函数
-  } = useFilter({
-    initialFilters: { name: 'initial' },
-    defaultExpanded: false,
-    onFilterChange: (filters) => console.log(filters),
-    maxVisibleItems: 3
-  });
-
-  return (
-    // 你的筛选表单
-  );
+const handleFilterChange = (filters: Record<string, string>) => {
+  console.log('Filters changed:', filters);
 };
-
+const filters: IFilters = [
+    {
+        label: '账单时间',
+        name: 'time',
+        renderType: 'dateRangePicker',
+        props: {
+            placeholder: ['开始时间', '结束时间'],
+        },
+    },
+    { 
+        label: '所属问题',
+        name: 'data_type_desc',
+        renderType: 'select',
+        props: {
+            options: [{ label: '问题1', value: '1' }, { label: '问题2', value: '2' }],
+            showSearch: true,
+        },
+    },
+    {
+        label: '申请单号',
+        name: 'ids',
+        renderType: 'input',
+        props: {
+            placeholder: '支持空格或英文逗号分隔批量查询',
+        },
+    },
+    {
+        label: '状态',
+        name: 'statusList',
+        renderType: 'select',
+        props: {
+            options: [
+                { value: '0', label: '暂存' },
+                { value: '1', label: '询价中' },
+                { value: '2', label: '审批中' },
+                { value: '3', label: '下架中' },
+                { value: '4', label: '出库中' },
+                { value: '5', label: '运输中' },
+                { value: '6', label: '已完成' },
+                { value: '7', label: '已中止' },
+            ],
+            placeholder: '支持多选',
+            mode: 'multiple',
+            showSearch: true,
+            optionFilterProp: "label"
+        },
+    },
+    {
+        label: '单号',
+        name: 'code',
+        renderType: 'input',
+        props: {
+            placeholder: '支持空格或英文逗号分隔批量查询',
+        },
+    },
+];
 // 或使用内置组件
 const YourPage = () => {
   return (
-    <FilterForm 
-      initialFilters={{ name: 'initial' }}
-      defaultExpanded={false}
-      onFilterChange={(filters) => console.log(filters)}
+     <FilterForm
+       filters={filters}  onFilterChange={handleFilterChange}
     />
   );
 };
@@ -70,22 +102,15 @@ const YourPage = () => {
 
 ## 📖 API
 
-### useFilter
-
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| initialFilters | 初始筛选条件 | `Record<string, string>` | `{}` |
-| defaultExpanded | 是否默认展开 | `boolean` | `false` |
-| onFilterChange | 筛选条件变化时的回调 | `(filters: Record<string, string>) => void` | - |
-| maxVisibleItems | 收起状态下显示的最大项目数 | `number` | `3` |
-
 ### FilterForm
 
 | 参数 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
-| initialFilters | 初始筛选条件 | `Record<string, string>` | `{}` |
+| filters | 筛选项的集合  | `[]` | `[]` |
 | defaultExpanded | 是否默认展开 | `boolean` | `false` |
 | onFilterChange | 筛选条件变化时的回调 | `(filters: Record<string, string>) => void` | - |
+| onOkText | 查询按钮文字 | string  | `查询` |
+| onResetText | 重置按钮文字 | string  | `清空` |
 
 ## 📄 许可证
 
