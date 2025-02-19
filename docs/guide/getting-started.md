@@ -12,12 +12,13 @@ yarn add use-antd-filter
 
 ```tsx
 import { FilterForm } from 'use-antd-filter';
-
 const App = () => {
   return (
     <FilterForm 
+      filters={[{label: '账单时间', name: 'time', renderType: 'dateRangePicker', props: {placeholder: ['开始时间', '结束时间']}}]}
       onFilterChange={(filters) => console.log(filters)}
+      defaultExpanded={true}
     />
   );
 };
-``` 
+```
