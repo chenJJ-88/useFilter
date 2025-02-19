@@ -35,7 +35,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
+    "docs:build": "vitepress build docs && cp -r docs/.vitepress/dist/* dist/",
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
