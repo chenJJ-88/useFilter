@@ -18,8 +18,7 @@ const FilterForm: React.FC<FilterFormProps> = ({
     initialFilters: initialFilters,
     defaultExpanded: defaultExpanded,
     onFilterChange: onFilterChange
-  });
-
+  });  
   return (
     <Form layout="vertical">
       <Row gutter={[16, 16]}>
