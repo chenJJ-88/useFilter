@@ -1,10 +1,18 @@
 # useFilter
 
+[![npm version](https://img.shields.io/npm/v/use-antd-filter.svg)](https://www.npmjs.com/package/use-antd-filter)
+[![GitHub license](https://img.shields.io/github/license/chenJJ-88/useFilter.svg)](https://github.com/chenJJ-88/useFilter/blob/main/LICENSE)
+[![Documentation](https://img.shields.io/badge/docs-online-blue.svg)](https://chenjj-88.github.io/useFilter/)
+
 一个基于 React 和 Ant Design 的灵活筛选表单 Hook，用于快速构建具有展开/收起功能的响应式筛选界面。
+
+## 📚 文档
+
+查看[在线文档和示例](https://chenjj-88.github.io/useFilter/)
 
 ## ✨ 特性
 
-- 🎯 支持展开/收起功能
+- �� 支持展开/收起功能
 - 🔄 响应式布局
 - 📦 开箱即用
 - 🎨 基于 Ant Design
