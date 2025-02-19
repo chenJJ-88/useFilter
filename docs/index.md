@@ -1,8 +1,8 @@
 ---
 layout: home
 hero:
-  name: useFilter
-  text: React 筛选表单 Hook
+  name: FormFilter
+  text: React 筛选表单 Components
   tagline: 基于 Ant Design 的灵活筛选表单解决方案
   actions:
     - theme: brand

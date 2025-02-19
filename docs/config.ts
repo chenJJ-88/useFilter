@@ -1,8 +1,8 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-    title: "use-antd-filter",
-    description: "一个基于 React 和 Ant Design 的灵活筛选表单 Hook",
+    title: "FormFilter",
+    description: "一个基于 React 和 Ant Design 的灵活筛选表单 component",
     base: '/useFilter/',  // 对应你的 GitHub 仓库名
     themeConfig: {
         nav: [
