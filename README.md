@@ -4,7 +4,7 @@
 [![GitHub license](https://img.shields.io/github/license/chenJJ-88/useFilter.svg)](https://github.com/chenJJ-88/useFilter/blob/main/LICENSE)
 [![Documentation](https://img.shields.io/badge/docs-online-blue.svg)](https://chenjj-88.github.io/useFilter/)
 
-一个基于 React 和 Ant Design 的灵活筛选表单 Hook，用于快速构建具有展开/收起功能的响应式筛选界面。
+一个基于 React 和 Ant Design 的灵活筛选表单 component，用于快速构建具有展开/收起功能的响应式筛选界面。
 
 ## 📚 文档
 
