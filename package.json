@@ -2,7 +2,7 @@
   "name": "use-antd-filter",
   "type": "module",
   "private": false,
-  "version": "0.1.1",
+  "version": "0.1.2",
   "packageManager": "pnpm@9.15.3",
   "description": "一个基于 React 和 Ant Design 的灵活筛选表单 Hook",
   "keywords": [
